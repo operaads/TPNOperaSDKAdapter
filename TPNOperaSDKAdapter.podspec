@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "opera" => "chenl@opera.com" }
 
   # ―――  平台设置  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.platform     = :ios, "13.0" 
+  spec.platform     = :ios, "15.0" 
   spec.swift_version = "5.0"
 
   # ―――  源码位置  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
