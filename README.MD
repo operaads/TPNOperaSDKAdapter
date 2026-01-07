@@ -1,4 +1,10 @@
-# TPNOperaSDKAdapter
+# TPNOperaSDKAdapter iOS Change Log (Object-C)
+
+(6.4.93.2) - Adapter内部进行OpAdxSdk的初始化,不再需要外部初始化OpAdxSdk代码
+
+---
+
+# TPNOperaSDKAdapter 适用于(TPNiOS<6.4.94)
 
 [![Version](https://img.shields.io/cocoapods/v/TPNOperaSDKAdapter.svg?style=flat)](https://cocoapods.org/pods/TPNOperaSDKAdapter)
 [![Platform](https://img.shields.io/cocoapods/p/TPNOperaSDKAdapter.svg?style=flat)](https://cocoapods.org/pods/TPNOperaSDKAdapter)
@@ -39,53 +45,8 @@ pod install
 🚀 快速开始
 1. 初始化 SDK (Required)
 
-重要提示：Opera SDK 的初始化必须在宿主 App 的 AppDelegate 中完成。Adapter 内部会等待初始化成功后再进行广告加载，但不会主动发起初始化。
+Adapter不再需要外部初始化代码，内部会自动初始化OpAdxSdk。
 
-请在 AppDelegate.m 中引入头文件并添加以下初始化代码：
-
-Objective-C
-#import "AppDelegate.h"
-// 引入 Opera SDK 头文件
-#import <OpAdxSdk/OpAdxSDK.h>
-
-@implementation AppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    // 初始化 Opera Ads SDK
-    [self initOpAdxSDK];
-
-    // 初始化 TopOn SDK (请确保 TopOn 也在此时或之后初始化)
-    // [ATAPI integrationChecking];
-    // [[ATAPI sharedInstance] startWithAppID:@"YOUR_TOPON_APPID" appKey:@"YOUR_TOPON_APPKEY" error:nil];
-
-    return YES;
-}
-
-// Opera SDK 初始化方法
-- (void)initOpAdxSDK {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        // 请替换为您在 Opera 后台申请的 ApplicationId 和 iOSAppId
-        NSString *applicationId = @"YOUR_OPERA_APPLICATION_ID";
-        NSString *iOSAppId = @"YOUR_IOS_APP_ID"; // 您的iOS应用Id
-
-        OpAdxSdkInitConfig *initConfig = [OpAdxSdkInitConfig createWithApplicationId:applicationId
-                                                                            iOSAppId:iOSAppId
-                                                                       publisherName:nil];
-
-        // 初始化 OpAdxSDK
-        [OpAdxSDK initializeWithConfig:initConfig
-                             onSuccess:^{
-            NSLog(@"[OpAdxSDK] initializeWithConfig onSuccess");
-        }
-                               onError:^(NSError *error) {
-            NSLog(@"[OpAdxSDK] initializeWithConfig error %@", error);
-        }];
-    });
-}
-
-@end
 2. TopOn 后台配置
 
 要在 TopOn 聚合管理后台中启用 Opera 广告源，请按照以下步骤添加 Custom Network (自定义广告平台)：
@@ -94,14 +55,20 @@ Objective-C
 
 进入 Network -> Custom Network。
 
+添加 app_id (pub1xxxxxxxxx/ep1xxxxxxxxx/app1xxxxxxxxx)
+
+添加 bundle_id  (苹果的appid,一串数字)
+
 添加一个新的自定义广告源，并填写以下 Adapter 类名信息：
 
-广告类型 (Ad Type)    Adapter 类名 (Class Name)
-Native (原生广告)    OpAdxToponNativeAdapter
+广告类型 (Ad Type)        Adapter 类名 (Class Name)
+Native (原生广告)           OpAdxToponNativeAdapter
+Banner (横幅广告)           OpAdxToponBannerAdapter
+Interstitial (插屏广告)     OpAdxToponInterstitialAdapter
+RewardVideo (激励广告)      OpAdxToponRewardVideoAdapter
+
 注意: serverInfo 中的参数（如 slot_id）将透传给 Adapter，请确保在 TopOn 后台配置的参数键值与 Opera 提供的广告位 ID 对应。
 
 ⚠️ 常见问题 (FAQ)
-Q: 为什么广告加载失败，提示 "OpAdx SDK not initialized"? A: 请检查您是否在 AppDelegate 中正确调用了 [OpAdxSDK initializeWithConfig:...]。Adapter 依赖宿主 App 完成 SDK 的初始化。
-
 Q: 需要手动设置 Mediation Provider 吗？ A: 不需要。TPNOperaSDKAdapter 会在检测到 SDK 初始化成功后，自动注入 TopOn 的 Mediation 标识，您只需关注业务层的初始化即可。
 ```

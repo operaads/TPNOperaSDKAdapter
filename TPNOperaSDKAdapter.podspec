@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   # ―――  基本信息  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "TPNOperaSDKAdapter"
-  spec.version      = "6.4.93.1"
+  spec.version      = "6.4.93.2"
   spec.summary      = "Opera Ads Adapter for TopOn (AnyThink) Mediation."
 
   spec.description  = <<-DESC
