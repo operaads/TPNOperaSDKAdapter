@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   # ―――  基本信息  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name         = "TPNOperaSDKAdapter"
-  spec.version      = "6.4.93.0"
+  spec.version      = "6.4.93.1"
   spec.summary      = "Opera Ads Adapter for TopOn (AnyThink) Mediation."
 
   spec.description  = <<-DESC
@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "opera" => "chenl@opera.com" }
 
   # ―――  平台设置  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.platform     = :ios, "15.0" 
+  spec.platform     = :ios, "13.0" 
   spec.swift_version = "5.0"
 
   # ―――  源码位置  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
   
   spec.dependency 'TPNiOS','6.4.93'
   
-  spec.dependency 'OpAdxSdk'    
+  spec.dependency 'OpAdxSdk', '~> 2.2.10'    
 
 
   # ―――  工程配置  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
