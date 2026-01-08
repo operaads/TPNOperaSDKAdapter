@@ -1,5 +1,7 @@
 # TPNOperaSDKAdapter iOS Change Log (Object-C)
 
+(6.4.93.3) - 首个广告请求loadADWithInfo需要等待OpAdxSdk完成后再执行
+
 (6.4.93.2) - Adapter内部进行OpAdxSdk的初始化,不再需要外部初始化OpAdxSdk代码
 
 ---
