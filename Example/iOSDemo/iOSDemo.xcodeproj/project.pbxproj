@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		45D66C2EDF4C46AF4829C4C9 /* Pods_iOSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0522E8CE4D2BFBFE9DCD6019 /* Pods_iOSDemo.framework */; };
-		483D51522F0DC03B00865D27 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = 483D51512F0DC03B00865D27 /* README.MD */; };
 		89255F812D2ADF5E00995FDE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89255F7F2D2ADF5E00995FDE /* HomeViewController.m */; };
 		89255FB82D2AE22700995FDE /* NaviBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89255FB72D2AE22700995FDE /* NaviBarView.m */; };
 		89255FBC2D2AE4A500995FDE /* LocalizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89255FBB2D2AE4A500995FDE /* LocalizationManager.m */; };
@@ -58,7 +57,6 @@
 /* Begin PBXFileReference section */
 		0522E8CE4D2BFBFE9DCD6019 /* Pods_iOSDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		483D514D2F0DBD5200865D27 /* OpAdxAdapterTopon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OpAdxAdapterTopon.xcframework; sourceTree = "<group>"; };
-		483D51512F0DC03B00865D27 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.MD; path = /Users/luanchen/Documents/CocoaPod/TPNOperaSDKAdapter/README.MD; sourceTree = "<absolute>"; };
 		7658D78AC0648F552B082D96 /* Pods-iOSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDemo.debug.xcconfig"; path = "Target Support Files/Pods-iOSDemo/Pods-iOSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		89255F7B2D2ADF2300995FDE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		89255F7C2D2ADF2700995FDE /* SDKMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDKMacros.h; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 				898A0EB92D2C0CCA00EF5B72 /* Others */,
 				8972AB8B2D2AD7A800CB5A22 /* AppDelegate.h */,
 				8972AB8C2D2AD7A800CB5A22 /* AppDelegate.m */,
-				483D51512F0DC03B00865D27 /* README.MD */,
 				8972AB8D2D2AD7A800CB5A22 /* Assets.xcassets */,
 				CAF8B0822D364FF600F3498E /* file */,
 				8972AB8E2D2AD7A800CB5A22 /* Info.plist */,
@@ -602,7 +599,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				483D51522F0DC03B00865D27 /* README.MD in Resources */,
 				CA5229CD2D55FB9900FB3D9C /* CustomCell.xib in Resources */,
 				CAF8B0832D364FF600F3498E /* file in Resources */,
 				8972AB992D2AD7A800CB5A22 /* Assets.xcassets in Resources */,
@@ -764,7 +760,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -803,7 +799,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

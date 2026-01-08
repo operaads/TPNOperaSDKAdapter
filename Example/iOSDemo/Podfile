@@ -23,8 +23,8 @@ target 'iOSDemo' do
   # DebugUI, recommended for debugging, remove before release
   pod 'TPNDebugUISDK'
   
-  pod 'TPNOperaSDKAdapter', '6.4.93.0'
-  pod 'OpAdxSdk', '2.2.9'
+  pod 'TPNOperaSDKAdapter', '~>6.4.93.3'
+  pod 'OpAdxSdk', '~>2.2.13'
   # To reduce Demo's initial pod install time, not all Adapter installations are listed. If you need to test with your own AppID/AppKey, replace with your selected Adapters and run pod install --repo-update
   
   # Adapters used in Demo, for more ad platforms visit SDK download center: https://portal.toponad.net/m/sdk/download?type=iOS

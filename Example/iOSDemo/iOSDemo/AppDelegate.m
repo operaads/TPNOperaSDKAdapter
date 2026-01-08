@@ -12,12 +12,6 @@
 #import "BaseNavigationController.h"
 #import "AdSDKManager.h"
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
-//#import "OpAdxToponBaseManager.h"
-#import <OpAdxSdk/OpAdxSDK.h>
-
-
-#define ApplicationId @"pub13423013211200/ep13423013211584/app14170937163904"
-#define IOSAppId  @"1444253128"
 
 @interface AppDelegate ()
 
@@ -32,8 +26,6 @@
  
     // Set up demo UI; no integration required
     [self setupDemoUI];
-    
-    [self initOpAdxSDK];
  
     // Initialize SDK: for non-EU releases use this method; for EU use [[AdSDKManager sharedManager] initSDK_EU:] instead.
     [[AdSDKManager sharedManager] initSDK];
@@ -46,10 +38,10 @@
 //        // Start splash ad
 //        [[AdSDKManager sharedManager] startSplashAd];
 //    }];
-       
+
     return YES;
 }
- 
+
 #pragma mark - lifecycle
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     static dispatch_once_t onceToken;
@@ -83,17 +75,4 @@
     [self.window makeKeyAndVisible];
 }
 
-- (void)initOpAdxSDK {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        OpAdxSdkInitConfig *initConfig = [OpAdxSdkInitConfig createWithApplicationId:ApplicationId iOSAppId:IOSAppId publisherName:nil];
-        // 初始化 OpAdxSDK
-        [OpAdxSDK initializeWithConfig:initConfig
-                             onSuccess:^{
-            NSLog(@"initializeWithConfig onSuccess");}
-                               onError:^(NSError *error) {
-            NSLog(@"initializeWithConfig error %@",error);
-        }];
-    });
-}
 @end
