@@ -23,7 +23,7 @@ target 'iOSDemo' do
   # DebugUI, recommended for debugging, remove before release
   pod 'TPNDebugUISDK'
   
-  pod 'TPNOperaSDKAdapter', '~>6.4.93.3'
+  pod 'TPNOperaSDKAdapter', '~>6.4.93.4'
   pod 'OpAdxSdk', '~>2.2.13'
   # To reduce Demo's initial pod install time, not all Adapter installations are listed. If you need to test with your own AppID/AppKey, replace with your selected Adapters and run pod install --repo-update
   
