@@ -11,7 +11,7 @@
 #import <AnyThinkSDK/AnyThinkSDK.h>
 
 //DebugUI SDK，此为可选接入，上线后建议移除
-#import <AnyThinkDebuggerUISDK/ATDebuggerAPI.h>
+//#import <AnyThinkDebuggerUISDK/ATDebuggerAPI.h>
 
 @interface TestModeTool : NSObject
 

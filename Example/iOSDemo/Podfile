@@ -21,7 +21,7 @@ target 'iOSDemo' do
   pod 'TPNiOS','6.4.93'
 
   # DebugUI, recommended for debugging, remove before release
-  pod 'TPNDebugUISDK'
+  pod 'TPNDebugUISDK', '1.0.6'
   
   pod 'TPNOperaSDKAdapter', '~>6.4.93.4'
   pod 'OpAdxSdk', '~>2.2.13'
