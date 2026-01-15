@@ -1,5 +1,7 @@
 # TPNOperaSDKAdapter iOS Change Log (Object-C)
 
+(6.4.93.5) - 更新上报version字段
+
 (6.4.93.4) - 解决原生广告上报问题
 
 (6.4.93.3) - 首个广告请求loadADWithInfo需要等待OpAdxSdk完成后再执行
